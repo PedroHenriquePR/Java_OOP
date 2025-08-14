@@ -2,20 +2,47 @@ package classes;
 
 public class geometriaPlana {
 
-    public  void quadrado (double lado, double area, double perimetro){
-        area = lado * lado;
-        perimetro = lado * 4;
-        System.out.println("A área do quadrado é: " + area);
+    public double areaquadrado (double lado){
+        return lado * lado; 
     }
 
-    public void triangulo (double base, double altura, double area, double perimetro){
-        area = (base * altura) / 2;
-        perimetro = base + (2 * Math.sqrt((base * base) + (altura * altura)));
-        System.out.println("A área do triângulo é: " + area);
+    public double perimetroquadrado (double lado){
+        return lado * 4;
+
     }
 
-    public void circunferencia (double raio, double area, double perimetro){
-        area = Math.PI * raio * raio;
+    public double areatriangulo (double base, double altura){
+        return (base * altura) / 2;
     }
+
+    public double perimetrotriangulo (double lado){
+        return lado + lado + lado;
+    }
+
+    public double arearetangulo (double base, double altura){
+        return base * altura;
+    }
+
+    public double perimetroretangulo (double base, double altura){
+        return 2 * (base + altura);
+    }
+
+    public double areacircunferencia (double raio){
+        return Math.PI * raio * raio;
+    }
+
+    public double comprimentocircunferencia (double raio){
+        return 2 * Math.PI * raio;
+    }
+
+    public double areatrapezio (double basemaior, double basemenor, double altura){
+        return ((basemaior + basemenor) * altura) / 2;
+    }
+
+    public double arealosango (double diagonalmaior, double diagonalmenor){
+        return (diagonalmenor * diagonalmaior)/ 2;
+    }
+
+    
 
 }   
