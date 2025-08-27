@@ -39,9 +39,20 @@ public class geometriaPlana {
         return ((basemaior + basemenor) * altura) / 2;
     }
 
+     public double perimetrotrapezio (double lado1, double lado2, double lado3, double lado4){
+        return lado1 + lado2 + lado3 + lado4;
+    }
+
     public double arealosango (double diagonalmaior, double diagonalmenor){
         return (diagonalmenor * diagonalmaior)/ 2;
     }
+
+    public double perimetrolosango (double lado){
+        return lado * 4;
+    }
+
+
+    
 
     
 
