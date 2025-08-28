@@ -178,27 +178,65 @@ public class app {
     }
 
     private static void calcularcubo(){
-
+        System.out.print("Digite a aresta do cubo: ");
+        double aresta = ler.nextDouble();
+        System.out.println("Volume: " + geoespacial.volumecubo(aresta));
+        System.out.println("Área lateral: " + geoespacial.arealateralcubo(aresta));
+        System.out.println("Área total: " + geoespacial.areatotalcubo(aresta));
     }
 
     private static void calcularesfera(){
-
+        System.out.print("Digite o raio da esfera: ");
+        double raio = ler.nextDouble();
+        System.out.println("Área: " + geoespacial.areaesfera(raio));
+        System.out.println("Volume: " + geoespacial.volumeesfera(raio));
     }
     
     private static void calcularcone(){
-
+        System.out.print("Digite o raio do cone: ");
+        double raio = ler.nextDouble();
+        System.out.print("Digite a altura do cone: ");
+        double altura = ler.nextDouble();
+        System.out.print("Digite a geratriz do cone: ");
+        double geratriz = ler.nextDouble();
+        System.out.println("Volume: " + geoespacial.volumecone(raio, altura));
+        System.out.println("Área lateral: " + geoespacial.arealateralcone(raio, geratriz));
+        System.out.println("Base: " + geoespacial.basecone(raio));
     }
 
     private static void calcularcilindro(){
+        System.out.print("Digite o raio do cilindro: ");
+        double raio = ler.nextDouble();
+        System.out.print("Digite a altura do cilindro: ");
+        double altura = ler.nextDouble();
+        System.out.println("Volume: " + geoespacial.volumecilindro(raio, altura));
+        System.out.println("Área da base: " + geoespacial.areabasecilindro(raio));
+        System.out.println("Área lateral: " + geoespacial.arealateralcilindro(raio, altura));
+        System.out.println("Área total: " + geoespacial.areatotalcilindro(altura, raio));
 
     }
 
     private static void  calcularparalelepipedo(){
+        System.out.print("Digite a largura do paralelepípedo: ");
+        double largura = ler.nextDouble();
+        System.out.print("Digite o comprimento do paralelepípedo: ");
+        double comprimento = ler.nextDouble();
+        System.out.print("Digite a altura do paralelepípedo: ");
+        double altura = ler.nextDouble();
+        System.out.println("Volume: " + geoespacial.areatotalparalelepípedo(largura, comprimento, altura));
+        System.out.println("Área total: " + geoespacial.areatotalparalelepípedo(largura, comprimento, altura));
 
     }
     
     private static void calcularpiramide(){
-
+        System.out.print("Digite a área da base da pirâmide: ");
+        double areabase = ler.nextDouble();
+        System.out.print("Digite a área lateral da pirâmide: ");
+        double arealateral = ler.nextDouble();
+        System.out.print("Digite a altura da pirâmide: ");
+        double altura = ler.nextDouble();
+        System.out.println("Volume: " +geoespacial.volumepiramide(areabase, altura));
+        System.out.println("Área: " + geoespacial.areapiramide(areabase, arealateral));
     }
 
     
