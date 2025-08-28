@@ -47,7 +47,6 @@ public class app {
             switch (opcao) {
                 case 0:
                     return;
-                    break;
                 case 1:
                     calcularquadrado();
                     break;
@@ -89,7 +88,6 @@ public class app {
             switch (opcao) {
                 case 0 :
                     return;
-                    break;
                 case 1:
                     calcularcubo();
                     break;
@@ -129,8 +127,8 @@ public class app {
         double altura = ler.nextDouble();
         System.out.print("Digite o lado do triângulo: ");
         double lado = ler.nextDouble();
-        System.out.println("Área" + geoplana.areatriangulo(base, altura));
-        System.out.println("Perímetro" + geoplana.perimetrotriangulo(lado));
+        System.out.println("Área: " + geoplana.areatriangulo(base, altura));
+        System.out.println("Perímetro: " + geoplana.perimetrotriangulo(lado));
     }
 
     private static void calcularretangulo(){
@@ -179,8 +177,30 @@ public class app {
         System.out.println("Perímetro: " +geoplana.perimetrolosango(lado));
     }
 
+    private static void calcularcubo(){
+
+    }
+
+    private static void calcularesfera(){
+
+    }
+    
+    private static void calcularcone(){
+
+    }
+
+    private static void calcularcilindro(){
+
+    }
+
+    private static void  calcularparalelepipedo(){
+
+    }
+    
+    private static void calcularpiramide(){
+
+    }
+
     
     
 }
-
-   
