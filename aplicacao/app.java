@@ -33,12 +33,154 @@ public class app {
     }
 
     public static void menugeoplana(){
+        while(true) {
+            System.out.println("Escolha uma forma para fazer a operação");
+            System.out.println("1. Quadrado");
+            System.out.println("2. Triângulo");
+            System.out.println("3. Retângulo");
+            System.out.println("4. Circunferência");
+            System.out.println("5. Trapézio");
+            System.out.println("6. Losango");
+            System.out.println("0. Sair");
+            int opcao = ler.nextInt();
 
+            switch (opcao) {
+                case 0:
+                    return;
+                    break;
+                case 1:
+                    calcularquadrado();
+                    break;
+                case 2: 
+                    calculartriangulo();
+                    break;
+                case 3:
+                    calcularretangulo();
+                    break;
+                case 4: 
+                    calcularcircunferencia();
+                    break;
+                case 5:
+                    calculartrapezio();
+                    break;
+                case 6: 
+                    calcularlosango();
+                    break;
+                default:
+                    System.out.println("Erro");
+            }
+
+        }
     }
 
     public static void menugeoespacial(){
-        
+        while(true){
+            System.out.println("Escolha uma forma para fazer a operação");
+            System.out.println("1. Cubo");
+            System.out.println("2. Esfera");
+            System.out.println("3. Cone");
+            System.out.println("4. Cilindro");
+            System.out.println("5. Paralelepípedo");
+            System.out.println("6. Pirâmide");
+            System.out.println("0.Sair");
+
+            int opcao = ler.nextInt();
+
+            switch (opcao) {
+                case 0 :
+                    return;
+                    break;
+                case 1:
+                    calcularcubo();
+                    break;
+                case 2: 
+                    calcularesfera();
+                    break;
+                case 3:
+                    calcularcone();
+                    break;
+                case 4:
+                    calcularcilindro();
+                    break;
+                case 5: 
+                    calcularparalelepipedo();
+                    break;
+                case 6: 
+                    calcularpiramide();
+                    break;
+                default:
+                    System.out.println("Erro");
+            }
+        }
     }
+    
+    private static void calcularquadrado(){
+        System.out.print("Digite a lado do quadrado: ");
+        double lado = ler.nextDouble();
+        
+        System.out.println("Área: " + geoplana.areaquadrado(lado));
+        System.out.println("Perímetro: " + geoplana.perimetroquadrado(lado));
+    }
+
+    private static void calculartriangulo(){
+        System.out.print("Digite a base do triângulo: ");
+        double base = ler.nextDouble();
+        System.out.print("Digite a altura do triângulo: ");
+        double altura = ler.nextDouble();
+        System.out.print("Digite o lado do triângulo: ");
+        double lado = ler.nextDouble();
+        System.out.println("Área" + geoplana.areatriangulo(base, altura));
+        System.out.println("Perímetro" + geoplana.perimetrotriangulo(lado));
+    }
+
+    private static void calcularretangulo(){
+        System.out.print("Digite a base do retângulo: ");
+        double base = ler.nextDouble();
+        System.out.print("Digite a altura do retângulo: ");
+        double altura = ler.nextDouble();
+        System.out.println("Área: " + geoplana.arearetangulo(base, altura));
+        System.out.println("Perímetro: " + geoplana.perimetroretangulo(base, altura));
+    }
+
+    private static void calcularcircunferencia(){
+        System.out.print("Digite o raio da circunferência");
+        double raio = ler.nextDouble();
+        System.out.println("Área: " + geoplana.areacircunferencia(raio));
+        System.out.println("Comprimento: " + geoplana.comprimentocircunferencia(raio));
+    }
+
+    private static void calculartrapezio(){
+        System.out.print("Digite a base menor do trapézio: ");
+        double basemenor = ler.nextDouble();
+        System.out.print("Digite a base maior do trapézio: ");
+        double basemaior  = ler.nextDouble();
+        System.out.print("Digite a altura do trapézio: ");
+        double altura = ler.nextDouble();
+        System.out.print("Digite o lado1 do trapézio: ");
+        double lado1 = ler.nextDouble();
+        System.out.print("Digite o lado2 do trapézio: ");
+        double lado2 = ler.nextDouble();
+        System.out.print("Digite o lado3 do trapézio: ");
+        double lado3 = ler.nextDouble();
+        System.out.print("Digite o lado4 do trapézio: ");
+        double lado4 = ler.nextDouble();
+        System.out.println("Área: " + geoplana.areatrapezio(basemaior, basemenor, altura));
+        System.out.println("Perímetro: " + geoplana.perimetrotrapezio(lado1, lado2, lado3, lado4));
+    }
+
+    private static void calcularlosango(){
+        System.out.print("Digite a diagonal menor do losango: ");
+        double diagonalmenor = ler.nextDouble();
+        System.out.print("Digite a diagonal maior do losango: ");
+        double digaonalmaior = ler.nextDouble();
+        System.out.print("Digite o lado do losango: ");
+        double lado = ler.nextDouble();
+        System.out.println("Área: " + geoplana.arealosango(digaonalmaior, diagonalmenor));
+        System.out.println("Perímetro: " +geoplana.perimetrolosango(lado));
+    }
+
+    
+    
 }
 
    
